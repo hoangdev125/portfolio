@@ -68,7 +68,7 @@ export const Hero: React.FC = () => {
       <div className="absolute top-1/2 right-10 w-64 h-64 bg-accentCyan/15 rounded-full blur-3xl animate-pulse-slow pointer-events-none" />
 
       {/* Decorative Grid Pattern */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b10_1px,transparent_1px),linear-gradient(to_bottom,#1e293b10_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)] pointer-events-none" />
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b10_1px,transparent_1px),linear-gradient(to_bottom,#1e293b10_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(closest-side_at_50%_50%,#000_70%,transparent_100%)] pointer-events-none" />
 
       <div className="max-w-4xl mx-auto text-center relative z-10 space-y-8">
         {/* Hello badge */}
