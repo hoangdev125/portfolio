@@ -53,8 +53,8 @@ const CONTACT_LINKS = [
   {
     id: "email",
     name: "Email",
-    value: "hoang.dev@gmail.com",
-    href: "mailto:hoang.dev@gmail.com",
+    value: "hoangdev125@gmail.com",
+    href: "mailto:hoangdev125@gmail.com",
     description: "Gửi thư trực tiếp để trao đổi công việc.",
     icon: () => <Mail className="h-7 w-7" />,
     color:

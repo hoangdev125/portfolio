@@ -5,6 +5,7 @@
 Xây dựng một website Portfolio cá nhân dành cho Fullstack Developer.
 
 Mục tiêu:
+
 - Thiết kế hiện đại, chuyên nghiệp.
 - Tập trung showcase kỹ năng và dự án.
 - Responsive trên mọi thiết bị.
@@ -16,16 +17,19 @@ Mục tiêu:
 # Tech Stack
 
 Frontend:
+
 - React
 - TypeScript
 - Vite
 - Tailwind CSS
 
 Libraries:
+
 - Framer Motion (animation)
 - Lucide React (icons)
 
 Deployment:
+
 - Vercel
 
 ---
@@ -42,19 +46,23 @@ Phong cách:
 - Professional Developer Portfolio
 - Clean Layout
 - Minimal but Premium
+- Theme toggle support (Dark / Light)
 
 Màu sắc chính:
 
 Background:
+
 - #0f172a
 - #020617
 
 Accent:
+
 - #3b82f6
 - #8b5cf6
 - #06b6d4
 
 Text:
+
 - White
 - Gray variants
 
@@ -65,6 +73,7 @@ Text:
 src/
 
 components/
+
 - Navbar.tsx
 - Footer.tsx
 - SectionTitle.tsx
@@ -72,6 +81,7 @@ components/
 - SkillCard.tsx
 
 sections/
+
 - Hero.tsx
 - About.tsx
 - Skills.tsx
@@ -80,13 +90,16 @@ sections/
 - Contact.tsx
 
 data/
+
 - skills.ts
 - projects.ts
 
 types/
+
 - index.ts
 
 assets/
+
 - images/
 
 App.tsx
@@ -110,6 +123,12 @@ Menu:
 - Projects
 - Experience
 - Contact
+
+Interactions:
+
+- ScrollSpy highlighting active section on scroll
+- Smooth scroll navigation
+- Back to top button appears after scrolling
 
 Mobile:
 
@@ -161,15 +180,18 @@ Content:
 Sinh viên CNTT đam mê phát triển ứng dụng web.
 
 Frontend:
+
 - React
 - TypeScript
 - Tailwind CSS
 
 Backend:
+
 - Java
 - Spring Boot
 
 Database:
+
 - MySQL
 
 Statistics Cards:
@@ -193,6 +215,7 @@ Display skills in cards.
 Skills:
 
 Frontend:
+
 - HTML
 - CSS
 - JavaScript
@@ -201,13 +224,16 @@ Frontend:
 - Tailwind CSS
 
 Backend:
+
 - Java
 - Spring Boot
 
 Database:
+
 - MySQL
 
 Tools:
+
 - Git
 - GitHub
 - VS Code
@@ -246,6 +272,7 @@ Each project contains:
 - Tech Stack
 - GitHub Link
 - Live Demo Link
+- Detail modal with extended content: large image, features, architecture, tech stack, lessons learned
 
 Projects:
 
@@ -256,17 +283,24 @@ Fullstack application for managing students,
 departments, classes, and academic information.
 
 Tech:
+
 - React
 - TypeScript
 - Spring Boot
 - MySQL
 
 Features:
+
 - CRUD Student
 - CRUD Department
 - Search
 - Filter
 - Dashboard
+
+Featured Project:
+
+- Student Management System should be highlighted as the featured project
+- Prominent layout with large image, rich description, architecture summary, frontend/backend/database stack, GitHub and Live Demo links
 
 2. Quiz Application
 
@@ -274,10 +308,12 @@ Description:
 Interactive quiz application.
 
 Tech:
+
 - React
 - TypeScript
 
 Features:
+
 - Multiple Choice
 - Score Calculation
 - Result Screen
@@ -288,6 +324,7 @@ Description:
 Personal developer portfolio.
 
 Tech:
+
 - React
 - Tailwind CSS
 
@@ -364,16 +401,20 @@ Use Framer Motion.
 Requirements:
 
 Hero:
+
 - Fade Up
 - Stagger Animation
 
 Sections:
+
 - Fade In on Scroll
 
 Cards:
+
 - Scale on Hover
 
 Navbar:
+
 - Smooth Transition
 
 ---
@@ -449,6 +490,17 @@ Requirements:
 - Optimized images
 - Clean React structure
 - Fast initial load
+
+---
+
+# Deployment
+
+- Build locally with `npm install` and `npm run build`.
+- Ensure production assets are generated under `dist/`.
+- Use Vercel to deploy the `dist` output directory.
+- If Vercel needs explicit configuration, include `vercel.json` with `distDir: "dist"`.
+- Tailwind CSS v4 should be integrated with `@tailwindcss/vite` and `@import "tailwindcss";` in `src/index.css`.
+- Avoid legacy Tailwind directives like `@tailwind base`, `@tailwind components`, and `@tailwind utilities` when using Tailwind v4.
 
 ---
 
