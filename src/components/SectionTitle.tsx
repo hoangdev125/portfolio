@@ -20,7 +20,7 @@ export const SectionTitle: React.FC<SectionTitleProps> = ({
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-xs md:text-sm font-semibold tracking-widest text-accentCyan uppercase mb-2"
+          className="text-xs md:text-sm font-semibold tracking-widest text-cyan-400 uppercase mb-2"
         >
           {subtitle}
         </motion.p>
@@ -41,7 +41,7 @@ export const SectionTitle: React.FC<SectionTitleProps> = ({
         whileInView={{ scaleX: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6, delay: 0.2 }}
-        className={`h-[3px] w-24 bg-gradient-to-r from-accentBlue to-accentCyan ${
+        className={`h-[3px] w-24 bg-gradient-to-r from-blue-500 to-cyan-400 ${
           centered ? 'mx-auto' : 'mr-auto'
         }`}
       />

@@ -27,11 +27,11 @@ export const Projects: React.FC = () => {
   const standardProjects = filteredProjects.filter((p) => !p.featured);
 
   return (
-    <section id="projects" className="py-24 bg-bgMain relative overflow-hidden px-6">
+    <section id="projects" className="py-24 bg-slate-950 relative overflow-hidden px-6">
       
       {/* Background neon elements */}
-      <div className="absolute top-1/3 left-0 w-96 h-96 bg-accentBlue/5 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-1/3 right-0 w-96 h-96 bg-accentPurple/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-1/3 left-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-1/3 right-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto">
         <SectionTitle title="Projects Showcase" subtitle="Dự án nổi bật" />
@@ -44,7 +44,7 @@ export const Projects: React.FC = () => {
               onClick={() => setFilter(tab)}
               className={`px-6 py-2.5 rounded-xl text-xs md:text-sm font-bold tracking-wider transition-all duration-300 border ${
                 filter === tab
-                  ? 'bg-gradient-to-r from-accentBlue to-accentCyan text-white border-transparent shadow-lg shadow-accentBlue/25'
+                  ? 'bg-gradient-to-r from-blue-500 to-cyan-400 text-white border-transparent shadow-lg shadow-blue-500/25'
                   : 'bg-slate-900/60 border-white/5 text-gray-400 hover:text-white hover:border-white/10'
               }`}
             >

@@ -51,9 +51,9 @@ export const Navbar: React.FC = () => {
           onClick={(e) => handleLinkClick(e, "#home")}
           className="flex items-center space-x-2 text-white font-bold text-xl tracking-wider glow-text-hover transition-all duration-300"
         >
-          <Code2 className="h-6 w-6 text-accentCyan" />
+          <Code2 className="h-6 w-6 text-cyan-400" />
           <span>
-            HOÀNG<span className="text-accentBlue"> DEV</span>
+            HOÀNG<span className="text-blue-500"> DEV</span>
           </span>
         </a>
 
@@ -67,7 +67,7 @@ export const Navbar: React.FC = () => {
               className="text-gray-300 hover:text-white text-sm font-medium transition-colors duration-300 relative group"
             >
               {item.label}
-              <span className="absolute bottom-[-4px] left-0 w-0 h-[2px] bg-gradient-to-r from-accentBlue to-accentCyan transition-all duration-300 group-hover:w-full" />
+              <span className="absolute bottom-[-4px] left-0 w-0 h-[2px] bg-gradient-to-r from-blue-500 to-cyan-400 transition-all duration-300 group-hover:w-full" />
             </a>
           ))}
         </nav>

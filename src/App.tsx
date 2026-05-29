@@ -19,10 +19,10 @@ const App: React.FC = () => {
   });
 
   return (
-    <div className="relative min-h-screen bg-bgMain text-slate-100 overflow-hidden select-none selection:bg-accentCyan/30 selection:text-white">
+    <div className="relative min-h-screen bg-slate-950 text-slate-100 overflow-hidden select-none selection:bg-cyan-400/30 selection:text-white">
       {/* Thin Premium Scroll Progress Bar */}
       <motion.div
-        className="fixed top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-accentBlue via-accentPurple to-accentCyan z-50 origin-[0%]"
+        className="fixed top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-400 z-50 origin-[0%]"
         style={{ scaleX }}
       />
 

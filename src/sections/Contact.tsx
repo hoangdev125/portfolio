@@ -58,7 +58,7 @@ const CONTACT_LINKS = [
     description: "Gửi thư trực tiếp để trao đổi công việc.",
     icon: () => <Mail className="h-7 w-7" />,
     color:
-      "text-accentCyan bg-accentCyan/10 border-accentCyan/20 hover:shadow-[0_0_20px_rgba(6,182,212,0.25)]",
+      "text-cyan-400 bg-cyan-400/10 border-cyan-400/20 hover:shadow-[0_0_20px_rgba(6,182,212,0.25)]",
   },
   {
     id: "github",
@@ -78,7 +78,7 @@ const CONTACT_LINKS = [
     description: "Kết nối mạng lưới công việc chuyên nghiệp.",
     icon: LinkedinIcon,
     color:
-      "text-accentBlue bg-accentBlue/10 border-accentBlue/20 hover:shadow-[0_0_20px_rgba(59,130,246,0.25)]",
+      "text-blue-500 bg-blue-500/10 border-blue-500/20 hover:shadow-[0_0_20px_rgba(59,130,246,0.25)]",
   },
   {
     id: "facebook",
@@ -88,7 +88,7 @@ const CONTACT_LINKS = [
     description: "Theo dõi tin tức và các chia sẻ cá nhân.",
     icon: FacebookIcon,
     color:
-      "text-accentPurple bg-accentPurple/10 border-accentPurple/20 hover:shadow-[0_0_20px_rgba(139,92,246,0.25)]",
+      "text-purple-500 bg-purple-500/10 border-purple-500/20 hover:shadow-[0_0_20px_rgba(139,92,246,0.25)]",
   },
 ];
 
@@ -96,11 +96,11 @@ export const Contact: React.FC = () => {
   return (
     <section
       id="contact"
-      className="py-24 bg-bgMain relative overflow-hidden px-6"
+      className="py-24 bg-slate-950 relative overflow-hidden px-6"
     >
       {/* Background Neon Glow Orbs */}
-      <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-accentBlue/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute top-1/4 right-1/4 w-72 h-72 bg-accentPurple/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-1/4 right-1/4 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-5xl mx-auto">
         <SectionTitle
@@ -113,7 +113,7 @@ export const Contact: React.FC = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="inline-flex p-3 rounded-full bg-slate-900 border border-white/10 text-accentCyan mb-2"
+            className="inline-flex p-3 rounded-full bg-slate-900 border border-white/10 text-cyan-400 mb-2"
           >
             <MessageSquare className="h-6 w-6" />
           </motion.div>
@@ -159,7 +159,7 @@ export const Contact: React.FC = () => {
                       <h3 className="text-white font-bold text-lg tracking-tight">
                         {link.name}
                       </h3>
-                      <p className="text-accentCyan font-bold text-sm tracking-wide truncate">
+                      <p className="text-cyan-400 font-bold text-sm tracking-wide truncate">
                         {link.value}
                       </p>
                       <p className="text-gray-500 text-xs md:text-sm font-medium pt-1">
@@ -240,7 +240,7 @@ const ContactForm: React.FC = () => {
           aria-label="Your name"
           value={name}
           onChange={(e) => setName(e.target.value)}
-          className={`mt-2 w-full px-4 py-3 rounded-lg bg-slate-900 border border-white/5 text-white focus:outline-none focus:ring-2 focus:ring-accentCyan transition`}
+          className={`mt-2 w-full px-4 py-3 rounded-lg bg-slate-900 border border-white/5 text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 transition`}
         />
         {errors.name && (
           <p className="text-xs text-rose-400 mt-1">{errors.name}</p>
@@ -254,7 +254,7 @@ const ContactForm: React.FC = () => {
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className={`mt-2 w-full px-4 py-3 rounded-lg bg-slate-900 border border-white/5 text-white focus:outline-none focus:ring-2 focus:ring-accentBlue transition`}
+          className={`mt-2 w-full px-4 py-3 rounded-lg bg-slate-900 border border-white/5 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition`}
         />
         {errors.email && (
           <p className="text-xs text-rose-400 mt-1">{errors.email}</p>
@@ -270,7 +270,7 @@ const ContactForm: React.FC = () => {
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           rows={5}
-          className={`mt-2 w-full px-4 py-3 rounded-lg bg-slate-900 border border-white/5 text-white focus:outline-none focus:ring-2 focus:ring-accentPurple transition`}
+          className={`mt-2 w-full px-4 py-3 rounded-lg bg-slate-900 border border-white/5 text-white focus:outline-none focus:ring-2 focus:ring-purple-500 transition`}
         />
         {errors.message && (
           <p className="text-xs text-rose-400 mt-1">{errors.message}</p>
@@ -280,7 +280,7 @@ const ContactForm: React.FC = () => {
       <div className="flex items-center justify-between">
         <button
           type="submit"
-          className="px-6 py-3 rounded-xl bg-gradient-to-r from-accentBlue to-accentCyan text-white font-semibold shadow-md hover:brightness-105 transition"
+          className="px-6 py-3 rounded-xl bg-gradient-to-r from-blue-500 to-cyan-400 text-white font-semibold shadow-md hover:brightness-105 transition"
         >
           Send Message
         </button>

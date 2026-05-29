@@ -60,12 +60,12 @@ export const Hero: React.FC = () => {
   return (
     <section
       id="home"
-      className="min-h-screen relative flex items-center justify-center bg-bgMain overflow-hidden pt-20 px-6"
+      className="min-h-screen relative flex items-center justify-center bg-slate-950 overflow-hidden pt-20 px-6"
     >
       {/* Background Neon Glow Orbs */}
-      <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-accentBlue/20 rounded-full blur-3xl animate-pulse-slow pointer-events-none" />
-      <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-accentPurple/10 rounded-full blur-3xl animate-pulse-slow pointer-events-none" />
-      <div className="absolute top-1/2 right-10 w-64 h-64 bg-accentCyan/15 rounded-full blur-3xl animate-pulse-slow pointer-events-none" />
+      <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl animate-pulse-slow pointer-events-none" />
+      <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse-slow pointer-events-none" />
+      <div className="absolute top-1/2 right-10 w-64 h-64 bg-cyan-400/15 rounded-full blur-3xl animate-pulse-slow pointer-events-none" />
 
       {/* Decorative Grid Pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b10_1px,transparent_1px),linear-gradient(to_bottom,#1e293b10_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(closest-side_at_50%_50%,#000_70%,transparent_100%)] pointer-events-none" />
@@ -76,7 +76,7 @@ export const Hero: React.FC = () => {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full glass-card border border-white/10 text-sm font-semibold text-accentCyan"
+          className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full glass-card border border-white/10 text-sm font-semibold text-cyan-400"
         >
           <span className="animate-bounce">👋</span>
           <span>Xin chào, tôi là</span>
@@ -102,7 +102,7 @@ export const Hero: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-2xl md:text-4xl lg:text-5xl font-extrabold"
           >
-            <span className="bg-gradient-to-r from-accentBlue via-accentPurple to-accentCyan bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-400 bg-clip-text text-transparent">
               Fullstack Developer
             </span>
           </motion.h2>
@@ -133,7 +133,7 @@ export const Hero: React.FC = () => {
             href="https://github.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="p-3 rounded-full bg-slate-900/80 border border-white/5 text-gray-400 hover:text-accentCyan hover:border-accentCyan hover:shadow-[0_0_15px_rgba(6,182,212,0.3)] transition-all duration-300 transform hover:-translate-y-1"
+            className="p-3 rounded-full bg-slate-900/80 border border-white/5 text-gray-400 hover:text-cyan-400 hover:border-cyan-400 hover:shadow-[0_0_15px_rgba(6,182,212,0.3)] transition-all duration-300 transform hover:-translate-y-1"
             aria-label="GitHub Profile"
           >
             <GithubIcon />
@@ -142,7 +142,7 @@ export const Hero: React.FC = () => {
             href="https://linkedin.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="p-3 rounded-full bg-slate-900/80 border border-white/5 text-gray-400 hover:text-accentBlue hover:border-accentBlue hover:shadow-[0_0_15px_rgba(59,130,246,0.3)] transition-all duration-300 transform hover:-translate-y-1"
+            className="p-3 rounded-full bg-slate-900/80 border border-white/5 text-gray-400 hover:text-blue-500 hover:border-blue-500 hover:shadow-[0_0_15px_rgba(59,130,246,0.3)] transition-all duration-300 transform hover:-translate-y-1"
             aria-label="LinkedIn Profile"
           >
             <LinkedinIcon />
@@ -151,7 +151,7 @@ export const Hero: React.FC = () => {
             href="https://facebook.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="p-3 rounded-full bg-slate-900/80 border border-white/5 text-gray-400 hover:text-accentPurple hover:border-accentPurple hover:shadow-[0_0_15px_rgba(139,92,246,0.3)] transition-all duration-300 transform hover:-translate-y-1"
+            className="p-3 rounded-full bg-slate-900/80 border border-white/5 text-gray-400 hover:text-purple-500 hover:border-purple-500 hover:shadow-[0_0_15px_rgba(139,92,246,0.3)] transition-all duration-300 transform hover:-translate-y-1"
             aria-label="Facebook Profile"
           >
             <FacebookIcon />
@@ -167,7 +167,7 @@ export const Hero: React.FC = () => {
         >
           <button
             onClick={handleScrollToProjects}
-            className="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-accentBlue to-accentCyan text-white text-base font-bold shadow-lg shadow-accentBlue/25 hover:brightness-110 hover:shadow-accentBlue/35 transition-all duration-300"
+            className="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-blue-500 to-cyan-400 text-white text-base font-bold shadow-lg shadow-blue-500/25 hover:brightness-110 hover:shadow-blue-500/35 transition-all duration-300"
           >
             View Projects
           </button>
@@ -194,7 +194,7 @@ export const Hero: React.FC = () => {
           <motion.div
             animate={{ y: [0, 8, 0] }}
             transition={{ repeat: Infinity, duration: 1.5 }}
-            className="text-accentCyan"
+            className="text-cyan-400"
           >
             <ArrowDown className="h-4 w-4" />
           </motion.div>

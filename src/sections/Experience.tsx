@@ -11,7 +11,7 @@ const TIMELINE_DATA = [
     institution: 'Trường Đại học Công nghệ',
     description: 'Chuyên ngành Kỹ thuật Phần mềm. Tập trung nghiên cứu cấu trúc dữ liệu, giải thuật, cơ sở dữ liệu và thiết kế hệ thống web.',
     icon: GraduationCap,
-    color: 'text-accentBlue border-accentBlue/30 bg-accentBlue/10',
+    color: 'text-blue-500 border-blue-500/30 bg-blue-500/10',
   },
   {
     id: 'learn-fullstack',
@@ -20,7 +20,7 @@ const TIMELINE_DATA = [
     institution: 'Tự học & Dự án Cá nhân',
     description: 'Bắt đầu nghiên cứu chuyên sâu về lập trình Web. Thành thạo xây dựng SPA bằng React và tích hợp với REST API của Spring Boot. Xây dựng dự án CRUD quản lý điểm và học tập.',
     icon: Brain,
-    color: 'text-accentPurple border-accentPurple/30 bg-accentPurple/10',
+    color: 'text-purple-500 border-purple-500/30 bg-purple-500/10',
   },
   {
     id: 'project-featured',
@@ -29,7 +29,7 @@ const TIMELINE_DATA = [
     institution: 'Dự án Cốt lõi',
     description: 'Hoàn thiện hệ thống quản lý sinh viên quy mô lớn với đầy đủ tính năng xác thực, phân quyền, tối ưu hóa các câu truy vấn MySQL phức tạp và nâng cao chất lượng code bằng TypeScript.',
     icon: Award,
-    color: 'text-accentCyan border-accentCyan/30 bg-accentCyan/10',
+    color: 'text-cyan-400 border-cyan-400/30 bg-cyan-400/10',
   },
   {
     id: 'future-ready',
@@ -38,16 +38,16 @@ const TIMELINE_DATA = [
     institution: 'Chuẩn bị thực tập',
     description: 'Đóng góp năng lực cho các dự án thực tế thông qua các chương trình Internship/Fresher. Sẵn sàng gia nhập các đội ngũ phát triển chuyên nghiệp.',
     icon: Star,
-    color: 'text-accentBlue border-accentBlue/30 bg-accentBlue/10',
+    color: 'text-blue-500 border-blue-500/30 bg-blue-500/10',
   }
 ];
 
 export const Experience: React.FC = () => {
   return (
-    <section id="experience" className="py-24 bg-bgMain relative overflow-hidden px-6">
+    <section id="experience" className="py-24 bg-slate-950 relative overflow-hidden px-6">
       
       {/* Background decoration elements */}
-      <div className="absolute top-1/2 left-10 w-72 h-72 bg-accentBlue/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-1/2 left-10 w-72 h-72 bg-blue-500/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-4xl mx-auto">
         <SectionTitle title="Learning Journey" subtitle="Lộ trình phát triển" />
@@ -65,7 +65,7 @@ export const Experience: React.FC = () => {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="hidden md:block absolute -left-32 top-1.5 w-24 text-right text-sm font-bold text-accentCyan uppercase"
+                  className="hidden md:block absolute -left-32 top-1.5 w-24 text-right text-sm font-bold text-cyan-400 uppercase"
                 >
                   {item.date}
                 </motion.div>
@@ -76,7 +76,7 @@ export const Experience: React.FC = () => {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, type: 'spring', stiffness: 200 }}
-                  className={`absolute -left-[17px] top-1 p-1.5 rounded-full border-2 border-slate-900 bg-bgMain ${item.color} shrink-0 z-10`}
+                  className={`absolute -left-[17px] top-1 p-1.5 rounded-full border-2 border-slate-900 bg-slate-950 ${item.color} shrink-0 z-10`}
                 >
                   <Icon className="h-4.5 w-4.5" />
                 </motion.div>
@@ -90,7 +90,7 @@ export const Experience: React.FC = () => {
                   className="glass-card glow-border p-6 rounded-2xl ml-6 md:ml-8"
                 >
                   {/* Date for mobile */}
-                  <span className="md:hidden block text-xs font-bold text-accentCyan uppercase mb-1">
+                  <span className="md:hidden block text-xs font-bold text-cyan-400 uppercase mb-1">
                     {item.date}
                   </span>
                   

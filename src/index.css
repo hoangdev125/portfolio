@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 @layer base {
   html {
@@ -8,10 +6,10 @@
     background-color: #020617;
     color: #f8fafc;
   }
-  
+
   body {
     overflow-x: hidden;
-    font-family: 'Inter', 'Outfit', sans-serif;
+    font-family: "Inter", "Outfit", sans-serif;
   }
 
   /* Custom Scrollbar */
@@ -54,7 +52,7 @@
     transition: all 0.3s ease;
   }
   .glow-border::after {
-    content: '';
+    content: "";
     position: absolute;
     inset: -1px;
     border-radius: inherit;

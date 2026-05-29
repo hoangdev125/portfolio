@@ -25,11 +25,11 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="glass-card rounded-3xl overflow-hidden p-6 md:p-8 lg:p-12 mb-12 border border-accentBlue/20 shadow-[0_0_50px_rgba(59,130,246,0.15)] relative"
+        className="glass-card rounded-3xl overflow-hidden p-6 md:p-8 lg:p-12 mb-12 border border-blue-500/20 shadow-[0_0_50px_rgba(59,130,246,0.15)] relative"
       >
         {/* Glow decorative effect */}
-        <div className="absolute -top-24 -left-24 w-96 h-96 bg-accentBlue/10 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-accentCyan/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute -top-24 -left-24 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-cyan-400/10 rounded-full blur-3xl pointer-events-none" />
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center relative z-10">
           {/* Featured Screenshot */}
@@ -47,7 +47,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           {/* Featured Details */}
           <div className="lg:col-span-6 space-y-6">
             <div className="space-y-2">
-              <span className="text-xs md:text-sm font-bold tracking-widest text-accentCyan uppercase px-3 py-1 rounded-full bg-accentCyan/10 border border-accentCyan/20 inline-block">
+              <span className="text-xs md:text-sm font-bold tracking-widest text-cyan-400 uppercase px-3 py-1 rounded-full bg-cyan-400/10 border border-cyan-400/20 inline-block">
                 Featured Project ⭐
               </span>
               <h3 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-white tracking-tight">
@@ -68,7 +68,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
                 <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                   {features.map((feature, index) => (
                     <li key={index} className="flex items-start text-xs md:text-sm text-gray-400 space-x-2">
-                      <CheckCircle2 className="h-4.5 w-4.5 text-accentCyan shrink-0 mt-0.5" />
+                      <CheckCircle2 className="h-4.5 w-4.5 text-cyan-400 shrink-0 mt-0.5" />
                       <span>{feature}</span>
                     </li>
                   ))}
@@ -109,7 +109,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
                   href={demoLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center space-x-2 bg-gradient-to-r from-accentBlue to-accentCyan hover:brightness-110 text-white text-sm font-semibold px-5 py-2.5 rounded-xl shadow-lg shadow-accentBlue/25 transition-all duration-300"
+                  className="flex items-center space-x-2 bg-gradient-to-r from-blue-500 to-cyan-400 hover:brightness-110 text-white text-sm font-semibold px-5 py-2.5 rounded-xl shadow-lg shadow-blue-500/25 transition-all duration-300"
                 >
                   <ExternalLink className="h-4 w-4" />
                   <span>Live Demo</span>
@@ -141,7 +141,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           loading="lazy"
         />
         {/* Glow overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-bgMain/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4 justify-end space-x-2">
+        <div className="absolute inset-0 bg-gradient-to-t from-bgmain/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4 justify-end space-x-2">
           <a
             href={githubLink}
             target="_blank"
@@ -156,7 +156,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
               href={demoLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 rounded-lg bg-gradient-to-r from-accentBlue to-accentCyan text-white transition-colors duration-300"
+              className="p-2 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-400 text-white transition-colors duration-300"
               title="Live Demo"
             >
               <ExternalLink className="h-4 w-4" />
@@ -167,7 +167,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
 
       {/* Card Info Body */}
       <div className="p-6 flex flex-col flex-grow space-y-4">
-        <h3 className="text-xl font-bold text-white tracking-tight group-hover:text-accentCyan transition-colors duration-300">
+        <h3 className="text-xl font-bold text-white tracking-tight group-hover:text-cyan-400 transition-colors duration-300">
           {name}
         </h3>
 
@@ -193,7 +193,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
             href={githubLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-accentCyan flex items-center space-x-1"
+            className="hover:text-cyan-400 flex items-center space-x-1"
           >
             <GithubIcon />
             <span>GitHub</span>
@@ -203,7 +203,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
               href={demoLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-accentCyan flex items-center space-x-1"
+              className="hover:text-cyan-400 flex items-center space-x-1"
             >
               <ExternalLink className="h-3.5 w-3.5" />
               <span>Demo</span>

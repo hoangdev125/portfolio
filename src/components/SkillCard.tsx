@@ -18,10 +18,10 @@ export const SkillCard: React.FC<SkillCardProps> = ({ skill }) => {
       className="glass-card glow-border p-6 rounded-2xl flex flex-col items-center justify-center text-center space-y-4 cursor-pointer relative overflow-hidden group"
     >
       {/* Dynamic Background Glow Effect */}
-      <div className="absolute inset-0 bg-gradient-to-r from-accentBlue/10 via-accentPurple/10 to-accentCyan/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-cyan-400/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
 
       {/* Icon Wrapper */}
-      <div className="p-4 rounded-xl bg-slate-800/80 text-accentCyan group-hover:text-white group-hover:bg-gradient-to-r group-hover:from-accentBlue group-hover:to-accentCyan transition-all duration-300">
+      <div className="p-4 rounded-xl bg-slate-800/80 text-cyan-400 group-hover:text-white group-hover:bg-gradient-to-r group-hover:from-blue-500 group-hover:to-cyan-400 transition-all duration-300">
         {IconComponent ? (
           <IconComponent className="h-8 w-8" />
         ) : (
@@ -30,7 +30,7 @@ export const SkillCard: React.FC<SkillCardProps> = ({ skill }) => {
       </div>
 
       {/* Skill Name */}
-      <h3 className="text-white font-medium text-base tracking-wide group-hover:text-accentCyan transition-colors duration-300">
+      <h3 className="text-white font-medium text-base tracking-wide group-hover:text-cyan-400 transition-colors duration-300">
         {skill.name}
       </h3>
     </motion.div>

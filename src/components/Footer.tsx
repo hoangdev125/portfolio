@@ -4,7 +4,7 @@ export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-bgMain border-t border-white/5 py-10 relative overflow-hidden">
+    <footer className="bg-slate-950 border-t border-white/5 py-10 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6 relative z-10">
         {/* Copyright info */}
         <p className="text-gray-500 text-sm text-center md:text-left">
@@ -19,7 +19,7 @@ export const Footer: React.FC = () => {
             href="https://github.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-500 hover:text-accentCyan transition-colors duration-300"
+            className="text-gray-500 hover:text-cyan-400 transition-colors duration-300"
             aria-label="GitHub Profile"
           >
             <svg
@@ -39,7 +39,7 @@ export const Footer: React.FC = () => {
             href="https://linkedin.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-500 hover:text-accentBlue transition-colors duration-300"
+            className="text-gray-500 hover:text-blue-500 transition-colors duration-300"
             aria-label="LinkedIn Profile"
           >
             <svg
@@ -60,7 +60,7 @@ export const Footer: React.FC = () => {
             href="https://facebook.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-500 hover:text-accentPurple transition-colors duration-300"
+            className="text-gray-500 hover:text-purple-500 transition-colors duration-300"
             aria-label="Facebook Profile"
           >
             <svg
