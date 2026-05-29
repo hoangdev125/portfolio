@@ -3,6 +3,7 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 10rem;
     background-color: #020617;
     color: #f8fafc;
   }
@@ -46,6 +47,20 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   }
 
+  /* Fix anchor links behind fixed navbar */
+  section[id] {
+    scroll-margin-top: 10rem;
+    position: relative;
+  }
+
+  section[id]::before {
+    content: "";
+    display: block;
+    height: 10rem;
+    margin-top: -10rem;
+    visibility: hidden;
+  }
+
   /* Custom Border Glow Effects */
   .glow-border {
     position: relative;
@@ -68,5 +83,166 @@
   /* Hover Gradient Glow Text */
   .glow-text-hover:hover {
     text-shadow: 0 0 8px rgba(6, 182, 212, 0.5);
+  }
+
+  .interactive-hover {
+    transition:
+      transform 0.28s ease,
+      box-shadow 0.28s ease,
+      filter 0.28s ease,
+      background-color 0.28s ease;
+    will-change: transform, box-shadow, filter;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+
+  .interactive-hover:hover,
+  .interactive-hover:focus-visible {
+    transform: translateY(-2px);
+    box-shadow: 0 18px 40px rgba(59, 130, 246, 0.18);
+  }
+
+  .interactive-hover:focus-visible {
+    outline: 2px solid rgba(56, 189, 248, 0.45);
+    outline-offset: 4px;
+  }
+
+  .animate-pulse-slow {
+    animation: pulse-slow 6s ease-in-out infinite;
+  }
+
+  @keyframes pulse-slow {
+    0%,
+    100% {
+      opacity: 0.65;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+
+  html.light-theme {
+    color-scheme: light;
+    background-color: #f8fafc;
+    color: #0f172a;
+  }
+
+  html.light-theme body {
+    background-color: #f8fafc;
+    color: #0f172a;
+  }
+
+  html.light-theme .glass-navbar {
+    background: rgba(255, 255, 255, 0.95);
+    border-color: rgba(15, 23, 42, 0.08);
+  }
+
+  html.light-theme .glass-card {
+    background: rgba(255, 255, 255, 0.94);
+    border-color: rgba(15, 23, 42, 0.08);
+    box-shadow: 0 15px 45px 0 rgba(15, 23, 42, 0.08);
+  }
+
+  html.light-theme .glass-card,
+  html.light-theme .glass-navbar,
+  html.light-theme .glass-border {
+    color: #0f172a;
+  }
+
+  html.light-theme .text-white,
+  html.light-theme .text-gray-100,
+  html.light-theme .text-gray-200 {
+    color: #0f172a !important;
+  }
+
+  html.light-theme .text-gray-300 {
+    color: #334155 !important;
+  }
+
+  html.light-theme .text-gray-400,
+  html.light-theme .text-gray-500 {
+    color: #475569 !important;
+  }
+
+  html.light-theme .text-gray-600,
+  html.light-theme .text-gray-700,
+  html.light-theme .text-gray-800 {
+    color: #0f172a !important;
+  }
+
+  html.light-theme [class*="bg-slate-950"],
+  html.light-theme [class*="bg-slate-900"],
+  html.light-theme [class*="bg-slate-800"],
+  html.light-theme [class*="bg-slate-700"] {
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    border-color: rgba(15, 23, 42, 0.08) !important;
+  }
+
+  html.light-theme .border-white\/10,
+  html.light-theme .border-white\/20,
+  html.light-theme .border-white\/5 {
+    border-color: rgba(15, 23, 42, 0.08) !important;
+  }
+
+  html.light-theme .text-cyan-400,
+  html.light-theme .text-blue-500,
+  html.light-theme .text-purple-500 {
+    color: inherit;
+  }
+
+  html.light-theme .bg-gradient-to-r.from-blue-500.to-cyan-400 {
+    background-image: linear-gradient(90deg, #0ea5e9, #22d3ee) !important;
+  }
+
+  html.light-theme .section-title-gradient {
+    background-image: linear-gradient(
+      90deg,
+      #0f172a,
+      #334155,
+      #64748b
+    ) !important;
+  }
+
+  html.light-theme .bg-slate-950,
+  html.light-theme .bg-slate-900,
+  html.light-theme .bg-slate-800,
+  html.light-theme .bg-slate-700 {
+    background-color: rgba(255, 255, 255, 0.92) !important;
+  }
+
+  html.light-theme .selection\:bg-cyan-400\/30::selection {
+    background: rgba(6, 182, 212, 0.3);
+    color: #0f172a;
+  }
+
+  /* Light theme scrollbar + hover fixes */
+  html.light-theme ::-webkit-scrollbar-track {
+    background: #f1f5f9; /* light track */
+  }
+  html.light-theme ::-webkit-scrollbar-thumb {
+    background: #cbd5e1; /* light thumb */
+    border-radius: 6px;
+  }
+  html.light-theme ::-webkit-scrollbar-thumb:hover {
+    background: #0ea5e9; /* accent on hover */
+  }
+
+  /* Ensure interactive elements still show hover affordance in light mode */
+  html.light-theme .interactive-hover:hover,
+  html.light-theme .interactive-hover:focus-visible {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 36px rgba(2, 6, 23, 0.06);
+  }
+
+  /* For elements using slate backgrounds, apply subtle darkening on hover in light theme */
+  /* Avoid filter on hover (causes repaint/jank). Use subtle background-color transition instead. */
+  html.light-theme [class*="bg-slate-"] {
+    transition: background-color 180ms ease !important;
+  }
+
+  html.light-theme [class*="bg-slate-"]:hover {
+    background-color: rgba(241, 245, 249, 0.96) !important;
   }
 }

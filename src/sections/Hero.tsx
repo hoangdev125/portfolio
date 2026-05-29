@@ -90,7 +90,7 @@ export const Hero: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tight text-white"
           >
-            <span className="bg-gradient-to-r from-white via-gray-100 to-gray-400 bg-clip-text text-transparent">
+            <span className="section-title-gradient bg-gradient-to-r from-white via-gray-100 to-gray-400 bg-clip-text text-transparent">
               HOÀNG
             </span>
           </motion.h1>
@@ -133,7 +133,7 @@ export const Hero: React.FC = () => {
             href="https://github.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="p-3 rounded-full bg-slate-900/80 border border-white/5 text-gray-400 hover:text-cyan-400 hover:border-cyan-400 hover:shadow-[0_0_15px_rgba(6,182,212,0.3)] transition-all duration-300 transform hover:-translate-y-1"
+            className="p-3 rounded-full bg-slate-900/80 border border-white/5 text-gray-400 hover:text-cyan-400 hover:border-cyan-400 hover:shadow-[0_0_15px_rgba(6,182,212,0.3)] interactive-hover"
             aria-label="GitHub Profile"
           >
             <GithubIcon />
@@ -142,7 +142,7 @@ export const Hero: React.FC = () => {
             href="https://linkedin.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="p-3 rounded-full bg-slate-900/80 border border-white/5 text-gray-400 hover:text-blue-500 hover:border-blue-500 hover:shadow-[0_0_15px_rgba(59,130,246,0.3)] transition-all duration-300 transform hover:-translate-y-1"
+            className="p-3 rounded-full bg-slate-900/80 border border-white/5 text-gray-400 hover:text-blue-500 hover:border-blue-500 hover:shadow-[0_0_15px_rgba(59,130,246,0.3)] interactive-hover"
             aria-label="LinkedIn Profile"
           >
             <LinkedinIcon />
@@ -151,7 +151,7 @@ export const Hero: React.FC = () => {
             href="https://facebook.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="p-3 rounded-full bg-slate-900/80 border border-white/5 text-gray-400 hover:text-purple-500 hover:border-purple-500 hover:shadow-[0_0_15px_rgba(139,92,246,0.3)] transition-all duration-300 transform hover:-translate-y-1"
+            className="p-3 rounded-full bg-slate-900/80 border border-white/5 text-gray-400 hover:text-purple-500 hover:border-purple-500 hover:shadow-[0_0_15px_rgba(139,92,246,0.3)] interactive-hover"
             aria-label="Facebook Profile"
           >
             <FacebookIcon />
@@ -167,7 +167,7 @@ export const Hero: React.FC = () => {
         >
           <button
             onClick={handleScrollToProjects}
-            className="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-blue-500 to-cyan-400 text-white text-base font-bold shadow-lg shadow-blue-500/25 hover:brightness-110 hover:shadow-blue-500/35 transition-all duration-300"
+            className="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-blue-500 to-cyan-400 text-white text-base font-bold shadow-lg shadow-blue-500/25 hover:brightness-110 hover:shadow-blue-500/35 interactive-hover"
           >
             View Projects
           </button>
@@ -175,7 +175,7 @@ export const Hero: React.FC = () => {
           {/* Download CV placeholder */}
           <a
             href="#download-cv"
-            className="w-full sm:w-auto px-8 py-4 rounded-xl bg-slate-900 border border-white/10 text-white text-base font-bold hover:bg-slate-800 hover:border-white/20 transition-all duration-300 flex items-center justify-center space-x-2"
+            className="w-full sm:w-auto px-8 py-4 rounded-xl bg-slate-900 border border-white/10 text-white text-base font-bold hover:bg-slate-800 hover:border-white/20 interactive-hover flex items-center justify-center space-x-2"
           >
             <span>Download CV</span>
           </a>

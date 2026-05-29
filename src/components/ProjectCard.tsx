@@ -1,18 +1,39 @@
-import React from 'react';
-import { ExternalLink, CheckCircle2 } from 'lucide-react';
-import { motion } from 'framer-motion';
-import type { Project } from '../types';
+import React from "react";
+import { ExternalLink, CheckCircle2 } from "lucide-react";
+import { motion } from "framer-motion";
+import type { Project } from "../types";
 
 interface ProjectCardProps {
   project: Project;
+  onViewDetails?: () => void;
 }
 
-export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
-  const { name, description, techStack, githubLink, demoLink, image, featured, features } = project;
+export const ProjectCard: React.FC<ProjectCardProps> = ({
+  project,
+  onViewDetails,
+}) => {
+  const {
+    name,
+    description,
+    techStack,
+    githubLink,
+    demoLink,
+    image,
+    featured,
+    features,
+  } = project;
 
   // Custom Github Inline SVG Icon
   const GithubIcon = () => (
-    <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <svg
+      className="h-4 w-4"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
       <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
       <path d="M9 18c-4.51 2-5-2-7-2" />
     </svg>
@@ -67,7 +88,10 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
                 </h4>
                 <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                   {features.map((feature, index) => (
-                    <li key={index} className="flex items-start text-xs md:text-sm text-gray-400 space-x-2">
+                    <li
+                      key={index}
+                      className="flex items-start text-xs md:text-sm text-gray-400 space-x-2"
+                    >
                       <CheckCircle2 className="h-4.5 w-4.5 text-cyan-400 shrink-0 mt-0.5" />
                       <span>{feature}</span>
                     </li>
@@ -94,26 +118,35 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
             </div>
 
             {/* Action Links */}
-            <div className="flex items-center space-x-4 pt-2">
+            <div className="flex flex-wrap items-center gap-4 pt-2">
               <a
                 href={githubLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center space-x-2 bg-slate-800 hover:bg-slate-700 text-white text-sm font-semibold px-5 py-2.5 rounded-xl border border-white/10 transition-colors duration-300"
+                className="flex items-center space-x-2 bg-slate-800 hover:bg-slate-700 text-white text-sm font-semibold px-5 py-2.5 rounded-xl border border-white/10 transition-colors duration-300 interactive-hover focus:outline-none"
               >
                 <GithubIcon />
                 <span>GitHub Source</span>
               </a>
-              {demoLink && demoLink !== '#' && (
+              {demoLink && demoLink !== "#" && (
                 <a
                   href={demoLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center space-x-2 bg-gradient-to-r from-blue-500 to-cyan-400 hover:brightness-110 text-white text-sm font-semibold px-5 py-2.5 rounded-xl shadow-lg shadow-blue-500/25 transition-all duration-300"
+                  className="flex items-center space-x-2 bg-gradient-to-r from-blue-500 to-cyan-400 hover:brightness-110 text-white text-sm font-semibold px-5 py-2.5 rounded-xl shadow-lg shadow-blue-500/25 transition-all duration-300 interactive-hover focus:outline-none"
                 >
                   <ExternalLink className="h-4 w-4" />
                   <span>Live Demo</span>
                 </a>
+              )}
+              {onViewDetails && (
+                <button
+                  type="button"
+                  onClick={onViewDetails}
+                  className="inline-flex items-center justify-center rounded-xl border border-white/10 bg-slate-900/80 px-5 py-3 text-sm font-semibold text-white transition hover:bg-slate-800"
+                >
+                  View Details
+                </button>
               )}
             </div>
           </div>
@@ -146,17 +179,17 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
             href={githubLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-white transition-colors duration-300"
+            className="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-white transition-colors duration-300 interactive-hover focus:outline-none"
             title="View Source"
           >
             <GithubIcon />
           </a>
-          {demoLink && demoLink !== '#' && (
+          {demoLink && demoLink !== "#" && (
             <a
               href={demoLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-400 text-white transition-colors duration-300"
+              className="p-2 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-400 text-white transition-colors duration-300 interactive-hover focus:outline-none"
               title="Live Demo"
             >
               <ExternalLink className="h-4 w-4" />
@@ -198,7 +231,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
             <GithubIcon />
             <span>GitHub</span>
           </a>
-          {demoLink && demoLink !== '#' && (
+          {demoLink && demoLink !== "#" && (
             <a
               href={demoLink}
               target="_blank"
@@ -210,6 +243,15 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
             </a>
           )}
         </div>
+        {onViewDetails && (
+          <button
+            type="button"
+            onClick={onViewDetails}
+            className="mt-4 w-full rounded-xl border border-white/10 bg-slate-900/80 px-5 py-3 text-sm font-semibold text-white transition hover:bg-slate-800 interactive-hover focus:outline-none"
+          >
+            View Details
+          </button>
+        )}
       </div>
     </motion.div>
   );

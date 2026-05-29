@@ -1,5 +1,5 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 
 interface SectionTitleProps {
   title: string;
@@ -13,7 +13,7 @@ export const SectionTitle: React.FC<SectionTitleProps> = ({
   centered = true,
 }) => {
   return (
-    <div className={`mb-12 ${centered ? 'text-center' : 'text-left'}`}>
+    <div className={`mb-12 ${centered ? "text-center" : "text-left"}`}>
       {subtitle && (
         <motion.p
           initial={{ opacity: 0, y: 10 }}
@@ -32,7 +32,7 @@ export const SectionTitle: React.FC<SectionTitleProps> = ({
         transition={{ duration: 0.5, delay: 0.1 }}
         className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-white mb-4"
       >
-        <span className="bg-gradient-to-r from-white via-gray-200 to-gray-500 bg-clip-text text-transparent">
+        <span className="section-title-gradient bg-gradient-to-r from-white via-gray-200 to-gray-500 bg-clip-text text-transparent">
           {title}
         </span>
       </motion.h2>
@@ -42,7 +42,7 @@ export const SectionTitle: React.FC<SectionTitleProps> = ({
         viewport={{ once: true }}
         transition={{ duration: 0.6, delay: 0.2 }}
         className={`h-[3px] w-24 bg-gradient-to-r from-blue-500 to-cyan-400 ${
-          centered ? 'mx-auto' : 'mr-auto'
+          centered ? "mx-auto" : "mr-auto"
         }`}
       />
     </div>

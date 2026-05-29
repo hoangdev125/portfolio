@@ -301,6 +301,7 @@ Featured Project:
 
 - Student Management System should be highlighted as the featured project
 - Prominent layout with large image, rich description, architecture summary, frontend/backend/database stack, GitHub and Live Demo links
+- Project filters for All / Fullstack / Frontend
 
 2. Quiz Application
 
@@ -379,7 +380,9 @@ Glassmorphism form.
 
 Validation:
 
-Required fields.
+- Required fields.
+- Real submission via EmailJS or equivalent
+- Toast notification on submit success or failure (e.g. Sonner)
 
 ---
 
@@ -501,6 +504,50 @@ Requirements:
 - If Vercel needs explicit configuration, include `vercel.json` with `distDir: "dist"`.
 - Tailwind CSS v4 should be integrated with `@tailwindcss/vite` and `@import "tailwindcss";` in `src/index.css`.
 - Avoid legacy Tailwind directives like `@tailwind base`, `@tailwind components`, and `@tailwind utilities` when using Tailwind v4.
+
+---
+
+# Implementation Plan
+
+This plan breaks the project into concrete implementation phases so the portfolio can be built incrementally and deployed reliably.
+
+1. Foundation
+
+- Initialize the Vite + React + TypeScript project.
+- Install dependencies: `@vitejs/plugin-react`, `tailwindcss`, `@tailwindcss/vite`, `framer-motion`, `lucide-react`.
+- Configure Tailwind v4 via `src/index.css` and `vite.config.ts`.
+- Add base layout and global styling for dark glassmorphism.
+
+2. Core layout and sections
+
+- Build `Navbar` with fixed header, transparent top state, and glass effect on scroll.
+- Create `Hero`, `About`, `Skills`, `Projects`, `Experience`, `Contact`, and `Footer` sections.
+- Use separate components for reusable UI pieces: `SectionTitle`, `ProjectCard`, `SkillCard`.
+- Add page anchors and smooth scrolling behavior.
+
+3. Feature enhancements
+
+- Implement Dark/Light theme toggle with persistent preference in `localStorage`.
+- Add ScrollSpy so the active section updates while scrolling.
+- Show a back-to-top button after the user scrolls down.
+- Add project filters for `All`, `Fullstack`, and `Frontend`.
+- Create a featured project display for the Student Management System.
+- Build a project detail modal with large image, features, architecture, tech stack, and lessons learned.
+
+4. Contact & notifications
+
+- Add a contact form with `name`, `email`, and `message` fields.
+- Include client-side validation for required fields.
+- Integrate EmailJS or an equivalent email service for real message delivery.
+- Add toast notifications with a lightweight library such as Sonner.
+
+5. Polish and production readiness
+
+- Add Framer Motion animations: fade-in sections, staggered hero text, hover card scale.
+- Ensure responsive layouts across mobile, tablet, and desktop breakpoints.
+- Optimize images and lazy load if needed.
+- Add SEO metadata and Open Graph tags to `index.html`.
+- Run `npm run build` and confirm `dist/` is generated successfully.
 
 ---
 
