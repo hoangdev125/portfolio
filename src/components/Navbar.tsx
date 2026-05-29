@@ -54,7 +54,9 @@ export const Navbar: React.FC<NavbarProps> = ({
           ? "bg-slate-950/80 backdrop-blur-md py-4 shadow-lg border-b border-white/5"
           : "bg-transparent py-6"
       }`}
-      style={{ backdropFilter: isScrolled ? "saturate(180%) blur(8px)" : undefined }}
+      style={{
+        backdropFilter: isScrolled ? "saturate(180%) blur(8px)" : undefined,
+      }}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between gap-4">
         {/* Logo */}
