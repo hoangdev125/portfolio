@@ -1,0 +1,112 @@
+<svg width="800" height="450" viewBox="0 0 800 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bg" x1="0" y1="0" x2="800" y2="450" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#020617"/>
+      <stop offset="1" stop-color="#0f172a"/>
+    </linearGradient>
+    
+    <!-- Neon Gradients -->
+    <linearGradient id="blueGlow" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop stop-color="#3b82f6"/>
+      <stop offset="1" stop-color="#06b6d4"/>
+    </linearGradient>
+    <linearGradient id="purpleGlow" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8b5cf6"/>
+      <stop offset="1" stop-color="#ec4899"/>
+    </linearGradient>
+    
+    <!-- Glow Filters -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Base Background -->
+  <rect width="800" height="450" fill="url(#bg)"/>
+
+  <!-- Glowing background circles -->
+  <circle cx="100" cy="100" r="120" fill="#3b82f6" fill-opacity="0.08" filter="url(#glow)"/>
+  <circle cx="700" cy="350" r="140" fill="#8b5cf6" fill-opacity="0.06" filter="url(#glow)"/>
+
+  <!-- Mock Dashboard UI Container -->
+  <g transform="translate(40, 30)">
+    <!-- Main UI Frame border -->
+    <rect width="720" height="390" rx="16" fill="#0f172a" fill-opacity="0.7" stroke="#1e293b" stroke-width="2"/>
+    
+    <!-- Sidebar Mock -->
+    <g transform="translate(0, 0)">
+      <rect width="70" height="390" rx="16" fill="#020617" fill-opacity="0.6" stroke="#1e293b" stroke-width="1"/>
+      <!-- Sidebar Items (Dots / Icons) -->
+      <circle cx="35" cy="40" r="14" fill="url(#blueGlow)" filter="url(#glow)"/>
+      <rect x="23" y="90" width="24" height="6" rx="3" fill="#3b82f6"/>
+      <rect x="23" y="120" width="24" height="6" rx="3" fill="#1e293b"/>
+      <rect x="23" y="150" width="24" height="6" rx="3" fill="#1e293b"/>
+      <rect x="23" y="180" width="24" height="6" rx="3" fill="#1e293b"/>
+    </g>
+
+    <!-- Top Navigation Mock -->
+    <g transform="translate(70, 0)">
+      <rect width="650" height="60" fill="#020617" fill-opacity="0.4" stroke="#1e293b" stroke-width="1"/>
+      <text x="30" y="36" fill="#ffffff" font-family="'Inter', sans-serif" font-size="16" font-weight="bold">Student Management System</text>
+      <!-- Admin user profile indicator -->
+      <circle cx="600" cy="30" r="12" fill="#1e293b"/>
+      <rect x="530" y="27" width="50" height="6" rx="3" fill="#3b82f6"/>
+    </g>
+
+    <!-- Content Workspace -->
+    <g transform="translate(90, 80)">
+      <!-- Statistics Cards Row -->
+      <g transform="translate(0, 0)">
+        <!-- Card 1 -->
+        <rect x="0" y="0" width="180" height="70" rx="12" fill="#020617" fill-opacity="0.8" stroke="#3b82f6" stroke-opacity="0.3" stroke-width="1"/>
+        <text x="15" y="25" fill="#64748b" font-family="'Inter', sans-serif" font-size="10" font-weight="600" uppercase="true">TOTAL STUDENTS</text>
+        <text x="15" y="52" fill="#ffffff" font-family="'Inter', sans-serif" font-size="22" font-weight="900">1,248</text>
+        <circle cx="150" cy="35" r="12" fill="#3b82f6" fill-opacity="0.2"/>
+        <path d="M146 38l3-3 2 2 3-4" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+        <!-- Card 2 -->
+        <rect x="200" y="0" width="180" height="70" rx="12" fill="#020617" fill-opacity="0.8" stroke="#8b5cf6" stroke-opacity="0.2" stroke-width="1"/>
+        <text x="215" y="25" fill="#64748b" font-family="'Inter', sans-serif" font-size="10" font-weight="600" uppercase="true">DEPARTMENTS</text>
+        <text x="215" y="52" fill="#ffffff" font-family="'Inter', sans-serif" font-size="22" font-weight="900">8 Active</text>
+        <circle cx="350" cy="35" r="12" fill="#8b5cf6" fill-opacity="0.2"/>
+
+        <!-- Card 3 -->
+        <rect x="400" y="0" width="210" height="70" rx="12" fill="#020617" fill-opacity="0.8" stroke="#06b6d4" stroke-opacity="0.2" stroke-width="1"/>
+        <text x="415" y="25" fill="#64748b" font-family="'Inter', sans-serif" font-size="10" font-weight="600" uppercase="true">AVERAGE GPA</text>
+        <text x="415" y="52" fill="#ffffff" font-family="'Inter', sans-serif" font-size="22" font-weight="900">3.42 / 4.0</text>
+        <circle cx="580" cy="35" r="12" fill="#06b6d4" fill-opacity="0.2"/>
+      </g>
+
+      <!-- Main Analytics Chart Area -->
+      <g transform="translate(0, 90)">
+        <rect width="610" height="200" rx="12" fill="#020617" fill-opacity="0.9" stroke="#1e293b" stroke-width="1"/>
+        <text x="20" y="25" fill="#ffffff" font-family="'Inter', sans-serif" font-size="12" font-weight="bold">Sĩ số &amp; Điểm số theo Học kỳ</text>
+        
+        <!-- Y-Axis Mock -->
+        <line x1="50" y1="40" x2="50" y2="170" stroke="#1e293b" stroke-width="1"/>
+        <line x1="50" y1="170" x2="580" y2="170" stroke="#1e293b" stroke-width="1"/>
+        
+        <!-- Grid lines -->
+        <line x1="50" y1="130" x2="580" y2="130" stroke="#1e293b" stroke-dasharray="4 4" stroke-width="1"/>
+        <line x1="50" y1="90" x2="580" y2="90" stroke="#1e293b" stroke-dasharray="4 4" stroke-width="1"/>
+        
+        <!-- Chart spline line - GLOWING -->
+        <path d="M60 150 Q 150 70, 250 110 T 450 60 T 570 80" fill="none" stroke="url(#blueGlow)" stroke-width="4" filter="url(#glow)"/>
+        
+        <!-- Spline points -->
+        <circle cx="150" cy="88" r="5" fill="#06b6d4"/>
+        <circle cx="250" cy="110" r="5" fill="#3b82f6"/>
+        <circle cx="450" cy="60" r="5" fill="#8b5cf6" filter="url(#glow)"/>
+        <circle cx="570" cy="80" r="5" fill="#ec4899"/>
+        
+        <!-- X-Axis Labels -->
+        <text x="135" y="185" fill="#64748b" font-family="'Inter', sans-serif" font-size="10">HK1</text>
+        <text x="235" y="185" fill="#64748b" font-family="'Inter', sans-serif" font-size="10">HK2</text>
+        <text x="435" y="185" fill="#64748b" font-family="'Inter', sans-serif" font-size="10">HK3</text>
+        <text x="555" y="185" fill="#64748b" font-family="'Inter', sans-serif" font-size="10">HK4</text>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,89 @@
+<svg width="800" height="450" viewBox="0 0 800 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bg" x1="0" y1="0" x2="800" y2="450" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#020617"/>
+      <stop offset="1" stop-color="#0f172a"/>
+    </linearGradient>
+    
+    <!-- Neon Gradients -->
+    <linearGradient id="blueGlow" x1="0" y1="0" x2="1" y2="1" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3b82f6"/>
+      <stop offset="1" stop-color="#06b6d4"/>
+    </linearGradient>
+    <linearGradient id="purpleGlow" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop stop-color="#8b5cf6"/>
+      <stop offset="1" stop-color="#d946ef"/>
+    </linearGradient>
+    
+    <!-- Glow Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Base Background -->
+  <rect width="800" height="450" fill="url(#bg)"/>
+
+  <!-- Glowing background circles -->
+  <circle cx="200" cy="300" r="130" fill="#8b5cf6" fill-opacity="0.08" filter="url(#glow)"/>
+  <circle cx="650" cy="150" r="110" fill="#06b6d4" fill-opacity="0.06" filter="url(#glow)"/>
+
+  <!-- Main Quiz UI Container -->
+  <g transform="translate(100, 40)">
+    <!-- Main Frame -->
+    <rect width="600" height="370" rx="20" fill="#0f172a" fill-opacity="0.75" stroke="#1e293b" stroke-width="2"/>
+    
+    <!-- Header -->
+    <g transform="translate(40, 30)">
+      <text x="0" y="20" fill="#a7f3d0" font-family="'Inter', sans-serif" font-size="12" font-weight="bold" letter-spacing="1">QUESTION 4 OF 10</text>
+      <text x="0" y="45" fill="#ffffff" font-family="'Inter', sans-serif" font-size="18" font-weight="900">What is the main advantage of TypeScript over JavaScript?</text>
+    </g>
+
+    <!-- Quiz Options List -->
+    <g transform="translate(40, 110)">
+      <!-- Option A -->
+      <rect x="0" y="0" width="360" height="50" rx="10" fill="#020617" fill-opacity="0.8" stroke="#1e293b" stroke-width="1"/>
+      <circle cx="25" cy="25" r="10" fill="#1e293b"/>
+      <text x="21" y="29" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11" font-weight="bold">A</text>
+      <text x="50" y="29" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="13" font-weight="medium">Faster compilation at runtime</text>
+
+      <!-- Option B (SELECTED & GLOWING) -->
+      <rect x="0" y="65" width="360" height="50" rx="10" fill="#020617" fill-opacity="0.9" stroke="#8b5cf6" stroke-width="2" filter="url(#glow)"/>
+      <circle cx="25" cy="90" r="10" fill="url(#purpleGlow)"/>
+      <text x="21" y="94" fill="#ffffff" font-family="'Inter', sans-serif" font-size="11" font-weight="bold">B</text>
+      <text x="50" y="94" fill="#ffffff" font-family="'Inter', sans-serif" font-size="13" font-weight="bold">Static typing and early error detection</text>
+      <circle cx="330" cy="90" r="6" fill="#8b5cf6"/>
+
+      <!-- Option C -->
+      <rect x="0" y="130" width="360" height="50" rx="10" fill="#020617" fill-opacity="0.8" stroke="#1e293b" stroke-width="1"/>
+      <circle cx="25" cy="155" r="10" fill="#1e293b"/>
+      <text x="21" y="159" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11" font-weight="bold">C</text>
+      <text x="50" y="159" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="13" font-weight="medium">Direct access to hardware registers</text>
+
+      <!-- Option D -->
+      <rect x="0" y="195" width="360" height="50" rx="10" fill="#020617" fill-opacity="0.8" stroke="#1e293b" stroke-width="1"/>
+      <circle cx="25" cy="220" r="10" fill="#1e293b"/>
+      <text x="21" y="224" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11" font-weight="bold">D</text>
+      <text x="50" y="224" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="13" font-weight="medium">Automatic database migration support</text>
+    </g>
+
+    <!-- Sidebar Score / Timer Circle Mock -->
+    <g transform="translate(440, 110)">
+      <!-- Outer Dial Circle -->
+      <circle cx="60" cy="80" r="55" fill="none" stroke="#1e293b" stroke-width="6"/>
+      <!-- Glowing active dial -->
+      <path d="M 60 25 A 55 55 0 1 1 21 119" fill="none" stroke="url(#blueGlow)" stroke-width="8" stroke-linecap="round" filter="url(#glow)"/>
+      <text x="60" y="75" text-anchor="middle" fill="#ffffff" font-family="'Inter', sans-serif" font-size="20" font-weight="900">75%</text>
+      <text x="60" y="95" text-anchor="middle" fill="#64748b" font-family="'Inter', sans-serif" font-size="9" font-weight="bold">PROGRESS</text>
+      
+      <!-- Action buttons -->
+      <rect x="10" y="170" width="100" height="35" rx="8" fill="url(#blueGlow)" filter="url(#glow)" stroke="none"/>
+      <text x="60" y="192" text-anchor="middle" fill="#ffffff" font-family="'Inter', sans-serif" font-size="12" font-weight="bold">Submit Next</text>
+      
+      <rect x="10" y="215" width="100" height="30" rx="8" fill="none" stroke="#1e293b" stroke-width="1"/>
+      <text x="60" y="234" text-anchor="middle" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11" font-weight="medium">Skip</text>
+    </g>
+  </g>
+</svg>
