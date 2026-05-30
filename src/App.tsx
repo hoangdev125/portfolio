@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { ArrowUp } from "lucide-react";
-import { motion, useScroll, useSpring } from "framer-motion";
 import { Toaster } from "sonner";
 import { Navbar } from "./components/Navbar";
 import { Hero } from "./sections/Hero";
@@ -26,14 +25,6 @@ const App: React.FC = () => {
   const [theme, setTheme] = useState<"light" | "dark">("dark");
   const [activeSection, setActiveSection] = useState<SectionId>("home");
   const [showBackToTop, setShowBackToTop] = useState(false);
-
-  // Page Scroll Progress Bar
-  const { scrollYProgress } = useScroll();
-  const scaleX = useSpring(scrollYProgress, {
-    stiffness: 100,
-    damping: 30,
-    restDelta: 0.001,
-  });
 
   useEffect(() => {
     const savedTheme = window.localStorage.getItem("theme") as
@@ -88,12 +79,6 @@ const App: React.FC = () => {
     <div className="relative min-h-screen overflow-hidden select-none selection:bg-cyan-400/30 selection:text-white">
       {/* Global toast container */}
       <Toaster position="top-right" richColors />
-
-      {/* Thin Premium Scroll Progress Bar */}
-      <motion.div
-        className="fixed top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-400 z-50 origin-[0%]"
-        style={{ scaleX }}
-      />
 
       {/* Navigation Header */}
       <Navbar
